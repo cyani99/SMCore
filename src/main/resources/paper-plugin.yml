@@ -1,0 +1,4 @@
+name: SMCore
+version: '${project.version}'
+main: pl.stylowamc.smcore.SMCore
+api-version: '1.20'
