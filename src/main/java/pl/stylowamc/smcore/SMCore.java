@@ -1,12 +1,14 @@
 package pl.stylowamc.smcore;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import pl.stylowamc.smcore.gameplay.pickaxes.CraftingBlock;
 
 public final class SMCore extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        Bukkit.getPluginManager().registerEvents(new CraftingBlock(), this);
 
     }
 
