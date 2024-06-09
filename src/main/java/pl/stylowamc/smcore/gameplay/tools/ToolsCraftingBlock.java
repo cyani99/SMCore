@@ -1,4 +1,5 @@
-package pl.stylowamc.smcore.gameplay.pickaxes;
+package pl.stylowamc.smcore.gameplay.tools;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
@@ -11,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 
-public class CraftingBlock implements Listener {
+public class ToolsCraftingBlock implements Listener {
     @EventHandler
     public void craftItem(PrepareItemCraftEvent e){
         Material itemType;
