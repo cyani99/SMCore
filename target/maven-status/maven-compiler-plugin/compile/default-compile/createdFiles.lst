@@ -1,2 +1,4 @@
+pl\stylowamc\smcore\gameplay\tools\commands\GetTools.class
+pl\stylowamc\smcore\gameplay\tools\ToolsCraftingBlock.class
 pl\stylowamc\smcore\SMCore.class
-pl\stylowamc\smcore\gameplay\pickaxes\CraftingBlock.class
+pl\stylowamc\smcore\gameplay\tools\utils\WoodenPickaxe.class
