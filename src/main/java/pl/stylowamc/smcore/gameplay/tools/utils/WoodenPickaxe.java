@@ -8,6 +8,13 @@ import pl.stylowamc.smcore.SMCore;
 
 import java.util.ArrayList;
 
+//WOODEN_PICKAXE+0  - 40 Blocks/minute
+//STONE_PICKAXE+0   - 70 Blocks/minute
+//IRON_PICKAXE+0    - 90 Blocks/minute
+//DIAMOND_PICKAXE+0 - 105 Blocks/minute
+//GOLDEN_PICKAXE+0  - 120 Blocks/minute
+
+
 public class WoodenPickaxe {
     public static final NamespacedKey WOODEN_PICKAXE_0 = new NamespacedKey(SMCore.getInstance(), "woodenpickaxe_0");
     static ArrayList<String> lore = new ArrayList<>();

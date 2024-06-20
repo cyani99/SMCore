@@ -2,12 +2,10 @@ package pl.stylowamc.smcore;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import pl.stylowamc.smcore.gameplay.tools.ToolsCraftingBlock;
-import pl.stylowamc.smcore.gameplay.tools.commands.GetTools;
-import pl.stylowamc.smcore.gameplay.tools.commands.SmithItem;
+import pl.stylowamc.smcore.listeners.DefaultToolsBlockListeners;
+import pl.stylowamc.smcore.gameplay.tools.commands.GetToolsCommand;
+import pl.stylowamc.smcore.gameplay.tools.commands.SmithItemCommand;
 import pl.stylowamc.smcore.gameplay.tools.gui.SmithGUI;
-
-//https://www.youtube.com/watch?v=D67hjtrxI4E&t=135s to check
 
 public final class SMCore extends JavaPlugin {
     private static SMCore plugin;
@@ -17,13 +15,13 @@ public final class SMCore extends JavaPlugin {
         plugin = this;
 
         //EVENTS
-        Bukkit.getPluginManager().registerEvents(new ToolsCraftingBlock(), this);
+        Bukkit.getPluginManager().registerEvents(new DefaultToolsBlockListeners(), this);
         Bukkit.getPluginManager().registerEvents(new SmithGUI(), this);
 
 
         //COMMANDS
-        this.getCommand("gettools").setExecutor(new GetTools());
-        this.getCommand("ulepsz").setExecutor(new SmithItem());
+        this.getCommand("gettools").setExecutor(new GetToolsCommand());
+        this.getCommand("ulepsz").setExecutor(new SmithItemCommand());
     }
 
     @Override

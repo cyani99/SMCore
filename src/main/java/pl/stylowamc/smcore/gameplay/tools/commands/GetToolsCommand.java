@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import pl.stylowamc.smcore.gameplay.tools.utils.WoodenPickaxe;
 
-public class GetTools implements CommandExecutor {
+public class GetToolsCommand implements CommandExecutor {
 
     // This method is called, when somebody uses our command
     @Override

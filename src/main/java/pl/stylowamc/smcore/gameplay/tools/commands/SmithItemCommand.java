@@ -4,10 +4,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import pl.stylowamc.smcore.gameplay.tools.gui.SmithGUI;
-import pl.stylowamc.smcore.gameplay.tools.utils.WoodenPickaxe;
 
-public class SmithItem implements CommandExecutor {
+public class SmithItemCommand implements CommandExecutor {
 
     // This method is called, when somebody uses our command
     @Override
@@ -17,7 +17,13 @@ public class SmithItem implements CommandExecutor {
             SmithGUI gui = new SmithGUI();
             if (p.hasPermission("smcore.admin.smithitem")) {
                 if (args.length == 0) {
-                    gui.openInventory(p);
+                    ItemStack item = p.getItemInHand();
+                    if (item.getItemMeta().getLore().isEmpty()) return false;
+                    if (item.getItemMeta().getDisplayName().equals("Drewniany Kilof +0")){
+                        p.getInventory().get
+                    }
+
+
                 } else{
                     p.sendMessage("Błąd");
                     return false;
