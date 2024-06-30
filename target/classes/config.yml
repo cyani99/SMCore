@@ -19,3 +19,83 @@ items:
     res3: 'OAK-LOG'
     amount3: 64
     chance: 90
+  woodenpickaxe_2:
+    name: 'Drewniany Kilof +2'
+    upgradeLevel: 2
+    res1: 'DIAMOND'
+    amount1: 10
+    res2: 'OAK-LOG'
+    amount2: 64
+    res3: 'OAK-LOG'
+    amount3: 64
+    chance: 90
+  woodenpickaxe_3:
+    name: 'Drewniany Kilof +3'
+    upgradeLevel: 3
+    res1: 'DIAMOND'
+    amount1: 10
+    res2: 'OAK-LOG'
+    amount2: 64
+    res3: 'OAK-LOG'
+    amount3: 64
+    chance: 90
+  woodenpickaxe_4:
+    name: 'Drewniany Kilof +4'
+    upgradeLevel: 4
+    res1: 'DIAMOND'
+    amount1: 10
+    res2: 'OAK-LOG'
+    amount2: 64
+    res3: 'OAK-LOG'
+    amount3: 64
+    chance: 90
+  woodenpickaxe_5:
+    name: 'Drewniany Kilof +5'
+    upgradeLevel: 5
+    res1: 'DIAMOND'
+    amount1: 10
+    res2: 'OAK-LOG'
+    amount2: 64
+    res3: 'OAK-LOG'
+    amount3: 64
+    chance: 90
+  woodenpickaxe_6:
+    name: 'Drewniany Kilof +6'
+    upgradeLevel: 6
+    res1: 'DIAMOND'
+    amount1: 10
+    res2: 'OAK-LOG'
+    amount2: 64
+    res3: 'OAK-LOG'
+    amount3: 64
+    chance: 90
+  woodenpickaxe_7:
+    name: 'Drewniany Kilof +7'
+    upgradeLevel: 7
+    res1: 'DIAMOND'
+    amount1: 10
+    res2: 'OAK-LOG'
+    amount2: 64
+    res3: 'OAK-LOG'
+    amount3: 64
+    chance: 90
+  woodenpickaxe_8:
+    name: 'Drewniany Kilof +8'
+    upgradeLevel: 8
+    res1: 'DIAMOND'
+    amount1: 10
+    res2: 'OAK-LOG'
+    amount2: 64
+    res3: 'OAK-LOG'
+    amount3: 64
+    chance: 90
+  woodenpickaxe_9:
+    name: 'Drewniany Kilof +9'
+    upgradeLevel: 9
+    res1: 'DIAMOND'
+    amount1: 10
+    res2: 'OAK-LOG'
+    amount2: 64
+    res3: 'OAK-LOG'
+    amount3: 64
+    chance: 90
