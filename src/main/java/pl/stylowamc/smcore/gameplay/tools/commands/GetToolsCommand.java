@@ -4,6 +4,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import pl.stylowamc.smcore.SMCore;
 import pl.stylowamc.smcore.gameplay.tools.utils.WoodenPickaxe;
 
 public class GetToolsCommand implements CommandExecutor {
@@ -19,10 +20,8 @@ public class GetToolsCommand implements CommandExecutor {
                     p.sendMessage("Dopisz przedmiot (MATERIAL_[ULEPSZENIE] np. wooden_pickaxe_3");
                     return false;
                 } else if (args.length == 1) {
-                    if (args[0].equalsIgnoreCase("wooden_pickaxe_0")) {
-                        p.getInventory().addItem(WoodenPickaxe.createWoodenPickaxe_0());
-                        return true;
-                    }
+                    SMCore.getInstance().getServer().broadcastMessage(args[0]);
+                    p.getInventory().addItem(WoodenPickaxe.createTool(args[0]));
                 }
             }
         }

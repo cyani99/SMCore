@@ -16,30 +16,41 @@ import java.util.ArrayList;
 
 
 public class WoodenPickaxe {
-    static String itemName = SMCore.getInstance().getConfig().getString("items.woodenpickaxe_0.name");
-    static String res1 = SMCore.getInstance().getConfig().getString("items.woodenpickaxe_0.res1");
-    static Integer amount1 = SMCore.getInstance().getConfig().getInt("items.woodenpickaxe_0.amount1");
-    static String res2 = SMCore.getInstance().getConfig().getString("items.woodenpickaxe_0.res2");
-    static Integer amount2 = SMCore.getInstance().getConfig().getInt("items.woodenpickaxe_0.amount2");
 
-    static Integer chance = SMCore.getInstance().getConfig().getInt("items.woodenpickaxe_0.chance");
-
-    public static final NamespacedKey WOODEN_PICKAXE_0 = new NamespacedKey(SMCore.getInstance(), "woodenpickaxe_0");
     static ArrayList<String> lore = new ArrayList<>();
 
-    public static ItemStack createWoodenPickaxe_0() {
-        ItemStack woodenPickaxe_0 = new ItemStack(Material.WOODEN_PICKAXE);
+    public static ItemStack createTool(String itemID) {
 
-        ItemMeta meta = woodenPickaxe_0.getItemMeta();
-        meta.setDisplayName(itemName);
-        lore.add("Zasoby potrzebne do ulepszenia na +1:");
-        lore.add("- "+res1+" x "+amount1);
-        lore.add("- "+res2+" x "+amount2);
-        lore.add("Szansa na ulepszenie: "+chance+"%");
-        meta.setLore(lore);
-        woodenPickaxe_0.setItemMeta(meta);
+        String itemName = SMCore.getInstance().getConfig().getString("items."+itemID+".name");
+        if (itemName!=null){
+            int upgradeLevel = SMCore.getInstance().getConfig().getInt("items."+itemID+".upgradeLevel");
+            String res1 = SMCore.getInstance().getConfig().getString("items."+itemID+".res1");
+            int amount1 = SMCore.getInstance().getConfig().getInt("items."+itemID+".amount1");
+            String res2 = SMCore.getInstance().getConfig().getString("items."+itemID+".res2");
+            int amount2 = SMCore.getInstance().getConfig().getInt("items."+itemID+".amount2");
+            String res3 = SMCore.getInstance().getConfig().getString("items."+itemID+".res3");
+            int amount3 = SMCore.getInstance().getConfig().getInt("items."+itemID+".amount3");
 
-        return woodenPickaxe_0;
+            int chance = SMCore.getInstance().getConfig().getInt("items."+itemID+".chance");
+            ItemStack tool = new ItemStack(Material.WOODEN_PICKAXE);
+
+            ItemMeta meta = tool.getItemMeta();
+            meta.setDisplayName(itemName);
+            lore.add("Zasoby potrzebne do ulepszenia na +"+(upgradeLevel+1)+":");
+            lore.add("- "+res1+" x "+amount1);
+            lore.add("- "+res2+" x "+amount2);
+            lore.add("- "+res3+" x "+amount3);
+            lore.add("Szansa na ulepszenie: "+chance+"%");
+            meta.setLore(lore);
+            tool.setItemMeta(meta);
+            lore.clear();
+            return tool;
+        }
+        else{
+            SMCore.getInstance().getServer().broadcastMessage("Taki przedmiot nie istnieje!");
+            return null;
+        }
+
     }
 
 

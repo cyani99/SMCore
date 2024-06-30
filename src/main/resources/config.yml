@@ -1,6 +1,7 @@
 items:
   woodenpickaxe_0:
     name: 'Drewniany Kilof +0'
+    upgradeLevel: 0
     res1: 'OAK_LOG'
     amount1: 64
     res2: 'OAK-LOG'
@@ -8,3 +9,13 @@ items:
     res3: 'OAK-LOG'
     amount3: 64
     chance: 95
+  woodenpickaxe_1:
+    name: 'Drewniany Kilof +1'
+    upgradeLevel: 1
+    res1: 'DIAMOND'
+    amount1: 10
+    res2: 'OAK-LOG'
+    amount2: 64
+    res3: 'OAK-LOG'
+    amount3: 64
+    chance: 90
