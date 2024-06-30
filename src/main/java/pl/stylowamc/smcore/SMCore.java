@@ -13,7 +13,7 @@ public final class SMCore extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
-
+        saveDefaultConfig();
         //EVENTS
         Bukkit.getPluginManager().registerEvents(new DefaultToolsBlockListeners(), this);
         Bukkit.getPluginManager().registerEvents(new SmithGUI(), this);

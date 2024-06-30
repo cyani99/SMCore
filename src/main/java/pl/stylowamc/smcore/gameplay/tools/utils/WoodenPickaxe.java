@@ -16,6 +16,14 @@ import java.util.ArrayList;
 
 
 public class WoodenPickaxe {
+    static String itemName = SMCore.getInstance().getConfig().getString("items.woodenpickaxe_0.name");
+    static String res1 = SMCore.getInstance().getConfig().getString("items.woodenpickaxe_0.res1");
+    static Integer amount1 = SMCore.getInstance().getConfig().getInt("items.woodenpickaxe_0.amount1");
+    static String res2 = SMCore.getInstance().getConfig().getString("items.woodenpickaxe_0.res2");
+    static Integer amount2 = SMCore.getInstance().getConfig().getInt("items.woodenpickaxe_0.amount2");
+
+    static Integer chance = SMCore.getInstance().getConfig().getInt("items.woodenpickaxe_0.chance");
+
     public static final NamespacedKey WOODEN_PICKAXE_0 = new NamespacedKey(SMCore.getInstance(), "woodenpickaxe_0");
     static ArrayList<String> lore = new ArrayList<>();
 
@@ -23,11 +31,11 @@ public class WoodenPickaxe {
         ItemStack woodenPickaxe_0 = new ItemStack(Material.WOODEN_PICKAXE);
 
         ItemMeta meta = woodenPickaxe_0.getItemMeta();
-        meta.setDisplayName("Drewniany Kilof +0");
+        meta.setDisplayName(itemName);
         lore.add("Zasoby potrzebne do ulepszenia na +1:");
-        lore.add("- DESKI_BRZOZY x 16");
-        lore.add("- DĘBOWY_PIEŃ x 64");
-        lore.add("Szansa na ulepszenie: 95%");
+        lore.add("- "+res1+" x "+amount1);
+        lore.add("- "+res2+" x "+amount2);
+        lore.add("Szansa na ulepszenie: "+chance+"%");
         meta.setLore(lore);
         woodenPickaxe_0.setItemMeta(meta);
 
